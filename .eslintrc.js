@@ -1,3 +1,3 @@
 module.exports = {
-  extends: 'eslint-config-prettier-react-ts'
+  extends: '@yrbasy/eslint-config-prettier-react-ts'
 };
