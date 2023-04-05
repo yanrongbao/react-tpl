@@ -1,10 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import './App.css';
 import logo from './logo.svg';
 
 function App() {
-  const [num, setNum] = useState<number>(1);
   return (
     <div className="App">
       <header className="App-header">
