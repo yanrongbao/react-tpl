@@ -5,6 +5,7 @@
   "scripts": {
     "start": "yrbasy-service start",
     "build": "yrbasy-service build",
+    "analysis": "yrbasy-service analysis",
     "lint": "yrbasy-service eslint",
     "prepare": "husky install"
   },
@@ -17,7 +18,7 @@
     "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^29.5.0",
     "@types/node": "^18.15.11",
-    "@yrbasy/cli-service": "^0.1.0",
+    "@yrbasy/cli-service": "file:.yalc/@yrbasy/cli-service",
     "@yrbasy/eslint-config-prettier-react-ts": "file:.yalc/@yrbasy/eslint-config-prettier-react-ts",
     "browserslist": "^4.21.5",
     "dotenv": "^16.0.3",
@@ -28,16 +29,11 @@
     "jest-watch-typeahead": "^2.2.2",
     "lint-staged": "^13.2.0"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "lint-staged": {
     "src/*.{js,jsx,mjs,ts,tsx}": [
       "prettier --write",
       "eslint --fix",
+      "eslint --max-warnings 0",
       "git add"
     ]
   },
